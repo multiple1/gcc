@@ -179,6 +179,7 @@ aarch64-cc-fusion.o: $(srcdir)/config/aarch64/aarch64-cc-fusion.cc \
 comma=,
 MULTILIB_OPTIONS    = $(subst $(comma),/, $(patsubst %, mabi=%, $(subst $(comma),$(comma)mabi=,$(TM_MULTILIB_CONFIG))))
 MULTILIB_DIRNAMES   = $(subst $(comma), ,$(TM_MULTILIB_CONFIG))
+MULTILIB_OSDIRNAMES = ""
 
 insn-conditions.md: s-check-sve-md
 s-check-sve-md: $(srcdir)/config/aarch64/check-sve-md.awk \
